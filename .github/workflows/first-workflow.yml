@@ -1,0 +1,13 @@
+name: First Workflow
+on: [push]
+
+jobs:
+  job-run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Step: Echo a String"
+        run: echo "Hello World !......"
+      - name: "Step: Multi-Line Commands"
+        run: |
+          node -v
+          cat /etc/os-release
