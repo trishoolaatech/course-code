@@ -18,3 +18,14 @@ jobs:
       - name: "Step: Check Software Version"
         run: |
           sw_vers
+
+  job-3-dependant-windows:
+    runs-on: ubuntu-latest
+    needs: job-1-run-shell-commands
+    steps: 
+      - name: "Step: Echo String"
+        run: echo "Dependant Job"
+      - name: "Step: Multi-Line Commands"
+        run: |
+          node -v
+          cat /etc/os-release
