@@ -10,6 +10,7 @@ jobs:
       - name: "Step: Multi-Line Commands"
         run: |
           node -v
+          npm -v
           cat /etc/os-release
     
   job-2-parallel-macos:
