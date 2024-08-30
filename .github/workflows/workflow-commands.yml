@@ -1,0 +1,13 @@
+name: second-workflow
+
+on: [push]
+
+jobs:
+  workflow-commands:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Setting an Error Message
+          run: |
+            echo "::error::Missing SemiColon"
+    
